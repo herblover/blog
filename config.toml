@@ -1,0 +1,45 @@
+baseurl = "http://blog.funspaces.org/"
+title = "Kenny's Blog"
+copyright = "(c) 2016 Kenny Kang."
+languageCode = "ko-kr"
+metaDataFormat = "toml"
+theme = "hyde-y"
+paginate = 10
+paginatePath = "page"
+disqusShortname = "kennygithub"
+
+[permalinks]
+    post = "/:year/:month/:day/:slug/"
+    code = "/:slug/"
+
+[taxonomies]
+    tag = "tags"
+    topic = "topics"
+
+[author]
+    name = "Kenny Kang"
+    email = "herblover@gmail.com"
+
+[params]
+    brand = "천천히 하나씩"
+    topline = "Development with Pleasure"
+    footline = "code with <i class='fa fa-heart'></i>"
+
+    sidebar = "left"
+
+    home = "Home"
+
+    highlight = "default"
+
+    googleAnalytics = "UA-71902268-1"
+
+    github = "herblover"
+
+[blackfriday]
+    angledQuotes = true
+    fractions = false
+    hrefTargetBlank = false
+    latexDashes = true
+    plainIdAnchors = true
+    extensions = []
+    extensionmask = []
