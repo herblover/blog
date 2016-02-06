@@ -3,5 +3,5 @@ build:
   steps:
     - arjen/hugo-build:
       version: "0.15"
-      theme: "hyde-y"
+      theme: hyde-y
       flags: --buildDrafts=true
