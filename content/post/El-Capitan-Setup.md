@@ -1,7 +1,7 @@
 +++
 author = "Kenny Kang"
-date = "2016-02-11T15:39:55+09:00"
-description = "Setup new os x el capitan machine from scratch"
+date = "2016-02-15T15:32:55+09:00"
+description = "Setup new OS X El Capitan from scratch"
 draft = false
 keywords = ["OS X", "El Captian", "Development", "Environment"]
 tags = ["Development", "Environment"]
@@ -27,10 +27,10 @@ Homebrew 설치
 
 > [Homebrew](brew.sh) 에서 Install Homebrew 참고하여 Terminal에서 설치.
 
-2015-11-24 기준은 다음과 같다.
+2016-02-15 기준은 다음과 같다.
 
 ```bash
-$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 Homebrew cask 설정
@@ -68,7 +68,6 @@ $ yadm commit
 기본 System Utility를 GNU 버전으로 변경
 
 ```bash
-$ brew install findutils --with-default-names
 $ brew install gnu-sed --with-default-names
 $ brew install gnu-tar --with-default-names
 $ brew install gnutls --with-default-names
@@ -125,7 +124,7 @@ $ brew install rbenv ruby-build
 ```bash
 $ yadm add .zshrc
 $ yadm commit
-$ rbenv install 2.2.3
+$ rbenv install 2.3.0
 $ brew cask install rubymine
 ```
 
@@ -147,3 +146,41 @@ $ yadm commit
 $ yadm add .zshrc
 $ yadm commit
 ```
+
+## Brew Cask Upgrade Function
+
+Brew Cask를 통해서 설치한 프로그램들은 업그레이드 관련하여 이슈가 있다. 관련하여 다음을 참고하자.
+
+* [brew cask upgrade](https://github.com/caskroom/homebrew-cask/issues/309)
+* [Draft Roadmap: `brew cask upgrade`](https://github.com/caskroom/homebrew-cask/issues/4678)
+* [Changes to homebrew-cask installation behavior](https://github.com/caskroom/homebrew-cask/issues/13201)
+
+사람마다 추천하는 업그레이드 방법이 다르지만, 개인적으로는 brew-cask-upgrade 라는 shell function을 이용 중이다.
+
+```bash
+brew-cask-upgrade() { 
+  if [ "$1" != '--continue' ]; then 
+    echo "Removing brew cache" 
+    rm -rf "$(brew --cache)" 
+    echo "Running brew update" 
+    brew update 
+  fi 
+  for c in $(brew cask list); do 
+    echo -e "\n\nInstalled versions of $c: " 
+    ls /opt/homebrew-cask/Caskroom/$c 
+    echo "Cask info for $c" 
+    brew cask info $c 
+    select ynx in "Yes" "No" "Exit"; do  
+      case $ynx in 
+        "Yes") echo "Uninstalling $c"; brew cask uninstall --force "$c"; echo "Re-installing $c"; brew cask install "$c"; break;; 
+        "No") echo "Skipping $c"; break;; 
+        "Exit") echo "Exiting brew-cask-upgrade"; return;; 
+      esac 
+    done 
+  done 
+} 
+```
+
+위 코드를 ~/.zshrc 마지막에 넣고, 새 shell을 실행 시킨 후, brew-cask-upgrade 명령을 내리면 업그레이드 절차가 진행된다. 다만, Version이 latest일 경우에는 버전 비교가 안되니 이 경우에는 수동으로 uninstall 후 install 해 줘야 한다.
+
+이런 절차가 복잡하고 귀찮거나, 루비 개발자의 경우에는 [brew-cask-upgrade gem](https://github.com/buo/brew-cask-upgrade)을 이용하는 방법을 선택할 수 있다.
