@@ -24,15 +24,10 @@ disqusShortname = "kennygithub"
     brand = "천천히 하나씩"
     topline = "Development with Pleasure"
     footline = "code with <i class='fa fa-heart'></i>"
-
     sidebar = "left"
-
     home = "Home"
-
     highlight = "default"
-
     googleAnalytics = "UA-71902268-1"
-
     github = "herblover"
 
 [blackfriday]
