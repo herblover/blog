@@ -5,6 +5,7 @@ build:
       version: "0.15"
       theme: hyde-y
       flags: --buildDrafts=true
+      disable_pygments: true
 deploy:
   steps:
     - lukevivier/gh-pages@0.2.1:
