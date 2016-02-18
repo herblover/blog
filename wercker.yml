@@ -4,7 +4,7 @@ build:
     - arjen/hugo-build:
       version: "0.15"
       theme: hyde-y
-      flags: --buildDrafts=true
+      flags: --buildDrafts=false
       disable_pygments: true
 deploy:
   steps:
