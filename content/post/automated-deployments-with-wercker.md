@@ -2,7 +2,7 @@
 author = "Kenny"
 date = "2016-02-16T14:13:53+09:00"
 description = "Automated Deployments with Wercker"
-draft = true
+draft = false
 keywords = ["Hugo", "Wercker", "Github-Pages"]
 tags = ["Hugo", "Wercker", "Github-Pages"]
 title = "Automated Deployments with Wercker"
@@ -201,3 +201,77 @@ $ git remote add origin git@github.com:YourUsername/hugo-sample.git
 $ git push -u origin master
 ```
 
+## Wercker 개요
+
+Wercker는 Docker 기반의 빌드 및 배포 도구이다. 작성한 코드를 Git Repo에 Push 하면, wercker.yml 설정에 따라 이후 작업을 수행하도록 되어 있다. 다양한 용도로 활용할 수 있지만, 이 글에서는 Wercker를 통해 Hugo 블로그 컨텐츠를 빌드하고, Github Pages에 배포하는데에만 집중한다.
+
+## Wercker 설정
+
+[Wercker](http://wercker.com) 사이트에 Github 계정으로 회원 가입을 하고, Github 권한을 주도록 하자.
+
+로그인 후에 좌상단에 있는 초록색 **+ Create **버튼을 클릭하고, Application 을 선택하면 내 Github 계정에서 접근 가능한 리포지트리가 뜬다. 좀 전에 만든 리포지트리를 선택하고, **Use selected repo**를 선택한다. 이후 화면에 표시되는 대로 **Next Step**을 클릭하면 기본 준비가 끝난다.
+
+어플리케이션이 준비되면, 이제 wercker.yml파일로 빌드 절차를 기록할 차례다.
+
+## wercker.yml
+
+Hugo site root에 다음과 같이 wercker.yml 파일을 만든다. 빌드할 때는 arjen/hugo-build 이미지를 이용한다.
+
+```yaml
+box: debian
+build:
+  steps:
+    - arjen/hugo-build:
+      version: "0.15"
+      theme: hyde-y
+      flags: --buildDrafts=false
+```
+
+이제 github에 push 하면 wercker가 자동으로 사이트를 빌드한다.
+
+```bash
+$ git add .
+$ git commit -a -m "wercker.yml added."
+$ git push
+```
+
+## wercker로 배포하기
+
+지금까지 작업으로 wercker build 까지 완료했다. 이제 github-pages 로 배포할 차례다.
+
+배포할 때는 lukevivier/gh-pages 이미지를 이용한다. 아까 만든 wercker.yml에 배포 관련 내용을 추가한다.
+
+```yaml
+box: debian
+build:
+  steps:
+    - arjen/hugo-build:
+      version: "0.15"
+      theme: hyde-y
+      flags: --buildDrafts=false
+deploy:
+  steps:
+    - install-packages:
+      packages: git ssh-client
+    - lukevivier/gh-pages@0.2.1:
+      token: $GIT_TOKEN
+      basedir: public
+```
+
+deploy 스텝에서 $GIT_TOKEN 부분은, 배포할 때 필요한 Github Token을 환경변수 형태로 전달 받았다는 의미다. 이 값은, Github 쪽에서 생성해야 한다.
+
+일단 **[Github Personal Access Tokens](https://github.com/settings/tokens)**에서 wercker용 Token을 하나 발급하고, 저장해 놓도록 하자.
+
+이제 wercker 사이트에서, 생성한 Appilcation 설정 페이지로 들어가 **Deploy targets**를 추가 한다. **Add deploy target**을 선택하고, **Custom deploy**를 선택한다.
+
+원하는 배포 명을 입력하고, **Auto deploy** 를 체크하고 branch에 **master** 를 입력하고 저장한다.
+
+**Deploy pipeline** 섹션에 **Add new variable**을 선택하고, name 항목에 **GIT_TOKEN**, value 항목에는 아까 Github에서 발급한 토큰을 입력하고 OK를 누르면 배포 준비가 완료되었다.
+
+이제 github에 push 하면 자동으로 github pages 까지 배포가 완료 된다!
+
+```bash
+$ git add .
+$ git commit -a -m "Add deploy settings to wercker.yml"
+$ git push
+```
