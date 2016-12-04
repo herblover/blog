@@ -2,7 +2,7 @@ box: debian
 build:
   steps:
     - arjen/hugo-build:
-      version: "0.15"
+      version: "0.17"
       theme: hyde-y
       flags: --buildDrafts=false
       disable_pygments: true
