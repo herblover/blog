@@ -51,7 +51,7 @@ type = "post"
 
 * [KB3145739](https://support.microsoft.com/ko-kr/kb/3145739)
 
-## [월별 보안 업데이트 최선 버전](https://support.microsoft.com/ko-kr/kb/3207752) 설치
+## [월별 보안 업데이트 최신 버전](https://support.microsoft.com/ko-kr/kb/3207752) 설치
 
 처음 참고했던 문서에서는 이 패치를 월별로 설치하도록 가이드 했다. Reddit 문서 및 MS 공식 문서 확인 결과 최종 버전만 설치하면 된다.
 
