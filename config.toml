@@ -1,6 +1,6 @@
 baseurl = "http://blog.funspaces.org/"
 title = "Kenny's Blog"
-copyright = "(c) 2016 Kenny Kang."
+copyright = "(c) 2016~2017 Kenny Kang."
 languageCode = "ko-kr"
 metaDataFormat = "toml"
 theme = "hyde-y"
