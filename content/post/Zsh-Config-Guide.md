@@ -6,7 +6,6 @@ title = "Z shell with Oh My Zsh Config Guide"
 topics = ["Development Environment Setup", "Mac OS", "Sierra", "Zsh", "Z shell", "Oh My Zsh"]
 description = "Install and Configure Z shell with Oh My Zsh on Mac OS Sierra"
 author = "Kenny Kang"
-draft = true
 date = "2017-02-13T19:08:26+09:00"
 +++
 
