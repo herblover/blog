@@ -1,4 +1,4 @@
-baseurl = "http://blog.funspaces.org/"
+baseurl = "https://blog.funspaces.org/"
 title = "Kenny's Blog"
 copyright = "(c) 2016~2017 Kenny Kang."
 languageCode = "ko-kr"
