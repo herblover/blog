@@ -2,7 +2,7 @@ box: debian
 build:
   steps:
     - arjen/hugo-build:
-      version: "0.18"
+      version: "0.31"
       theme: hyde-y
       flags: --buildDrafts=false
       disable_pygments: true
@@ -10,7 +10,7 @@ deploy:
   steps:
     - install-packages:
       packages: git ssh-client
-    - lukevivier/gh-pages@0.2.1:
+    - lukevivier/gh-pages@0.2.4:
       token: $GIT_TOKEN
       domain: blog.funspaces.org
       basedir: public
