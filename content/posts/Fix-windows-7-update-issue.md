@@ -7,7 +7,6 @@ keywords = ["Windows7","Development", "Environment"]
 author = "Kenny Kang"
 draft = false
 description = "Fix windows 7 Windows Update Issue"
-type = "post"
 +++
 온라인 뱅킹과 ActiveX 만 지원하는 사이트를 위해 Hyper-V로 Windows 7 SP1을 설치했더니 왠걸?! 업데이트가 되지 않는다. 윈도우 업데이트에서는 업데이트 대상을 찾는다고 시간만 보내다가 업데이트를 찾을 수 없다는 오류만 뜬다.
 관련하여 검색을 해 보다가, [WINDOWS 7 WON’T UPDATE? HERE’S WHAT TO DO](http://plugable.com/2016/06/08/windows-7-wont-update-what-to-do/)라는 좋은 글을 찾아 요약 및 향후 설치에 적용하기 위해 정리해 본다.
@@ -65,6 +64,6 @@ type = "post"
 
 * [KB3020369](https://www.catalog.update.microsoft.com/Search.aspx?q=KB3020369)
 * [KB3125574](https://www.catalog.update.microsoft.com/Search.aspx?q=KB3125574)
-* [KB3138612](https://www.catalog.update.microsoft.com/Search.aspx?q=KB3138612) 
+* [KB3138612](https://www.catalog.update.microsoft.com/Search.aspx?q=KB3138612)
 * [KB3145739](https://www.catalog.update.microsoft.com/Search.aspx?q=KB3145739)
 * [KB3207752](https://www.catalog.update.microsoft.com/Search.aspx?q=kb3207752)

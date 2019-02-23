@@ -3,11 +3,8 @@ author = "Kenny Kang"
 date = "2016-02-15T15:32:55+09:00"
 description = "Setup new OS X El Capitan from scratch"
 draft = false
-keywords = ["OS X", "El Captian", "Development", "Environment"]
 tags = ["Development", "Environment"]
 title = "El Capitan Setup"
-topics = ["Development Environment Setup"]
-type = "post"
 +++
 ## XCode 설치
 
@@ -158,27 +155,27 @@ Brew Cask를 통해서 설치한 프로그램들은 업그레이드 관련하여
 사람마다 추천하는 업그레이드 방법이 다르지만, 개인적으로는 brew-cask-upgrade 라는 shell function을 이용 중이다.
 
 ```bash
-brew-cask-upgrade() { 
-  if [ "$1" != '--continue' ]; then 
-    echo "Removing brew cache" 
-    rm -rf "$(brew --cache)" 
-    echo "Running brew update" 
-    brew update 
-  fi 
-  for c in $(brew cask list); do 
-    echo -e "\n\nInstalled versions of $c: " 
-    ls /opt/homebrew-cask/Caskroom/$c 
-    echo "Cask info for $c" 
-    brew cask info $c 
-    select ynx in "Yes" "No" "Exit"; do  
-      case $ynx in 
-        "Yes") echo "Uninstalling $c"; brew cask uninstall --force "$c"; echo "Re-installing $c"; brew cask install "$c"; break;; 
-        "No") echo "Skipping $c"; break;; 
-        "Exit") echo "Exiting brew-cask-upgrade"; return;; 
-      esac 
-    done 
-  done 
-} 
+brew-cask-upgrade() {
+  if [ "$1" != '--continue' ]; then
+    echo "Removing brew cache"
+    rm -rf "$(brew --cache)"
+    echo "Running brew update"
+    brew update
+  fi
+  for c in $(brew cask list); do
+    echo -e "\n\nInstalled versions of $c: "
+    ls /opt/homebrew-cask/Caskroom/$c
+    echo "Cask info for $c"
+    brew cask info $c
+    select ynx in "Yes" "No" "Exit"; do
+      case $ynx in
+        "Yes") echo "Uninstalling $c"; brew cask uninstall --force "$c"; echo "Re-installing $c"; brew cask install "$c"; break;;
+        "No") echo "Skipping $c"; break;;
+        "Exit") echo "Exiting brew-cask-upgrade"; return;;
+      esac
+    done
+  done
+}
 ```
 
 위 코드를 ~/.zshrc 마지막에 넣고, 새 shell을 실행 시킨 후, brew-cask-upgrade 명령을 내리면 업그레이드 절차가 진행된다. 다만, Version이 latest일 경우에는 버전 비교가 안되니 이 경우에는 수동으로 uninstall 후 install 해 줘야 한다.

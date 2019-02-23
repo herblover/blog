@@ -7,7 +7,6 @@ keywords = ["Hugo", "Wercker", "Github-Pages"]
 tags = ["Hugo", "Wercker", "Github-Pages"]
 title = "Automated Deployments with Wercker"
 topics = ["Hugo", "Wercker", "Github-Pages"]
-type = "post"
 +++
 
 기본 Hugo 프로젝트를 만들고 Wercker를 이용해 자동으로 Github-Pages에 배포하는 작업을 해 보자. 역시나 이 글도 Hugo 공식 문서에 있는 [Automated deployments with Wercker](http://gohugo.io/tutorials/automated-deployments/)의 일부 내용 번역과, 직접 해 보면서 느낀 부분들을 첨언하는 것에 중점을 두려고 한다.

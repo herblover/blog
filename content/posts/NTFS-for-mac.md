@@ -5,7 +5,6 @@ description = "NTFS write setting for mac os sierra"
 keywords = ["MacOS", "Sierra", "Development", "Environment"]
 topics = ["Development Environment Setup"]
 title = "NTFS for mac"
-type = "post"
 draft = false
 author = "Kenny Kang"
 +++

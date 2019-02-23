@@ -1,40 +1,52 @@
-baseurl = "https://blog.funspaces.org/"
-title = "Kenny's Blog"
-copyright = "(c) 2016~2017 Kenny Kang."
+## Basic Configuration
+baseurl = "https://blog.funspaces.org"
 languageCode = "ko-kr"
-metaDataFormat = "toml"
-theme = "hyde-y"
-paginate = 10
-paginatePath = "page"
+
+title = "Kenny's Blog"
+theme = "hyde-hyde"
+
+## Hugo Built-in Features
 disqusShortname = "kennygithub"
+googleAnalytics = "UA-71902268-1"
+# enableRobotsTXT = true
 
-[permalinks]
-    post = "/:year/:month/:day/:slug/"
-    code = "/:slug/"
+summarylength = 30
 
-[taxonomies]
-    tag = "tags"
-    topic = "topics"
+paginate = 10
 
-[author]
-    name = "Kenny Kang"
-    email = "herblover@gmail.com"
-
+## Site Settings
 [params]
-    brand = "천천히 하나씩"
-    topline = "Development with Pleasure"
-    footline = "code with <i class='fa fa-heart'></i>"
-    sidebar = "left"
-    home = "Home"
-    highlight = "default"
-    googleAnalytics = "UA-71902268-1"
-    github = "herblover"
+    author = "Kenny Kang"
+    title = "Kenny"
+    # description = "..."
+    # authorimage = ""
+    # dateformat = "2006-01-02T15:04:05-0700"
 
-[blackfriday]
-    angledQuotes = true
-    fractions = false
-    hrefTargetBlank = false
-    latexDashes = true
-    plainIdAnchors = true
-    extensions = []
-    extensionmask = []
+    # sidebar, copyright & license
+    copyright = "Kenny"
+    license = "CC BY-SA 4.0"
+    licenseURL = "https://creativecommons.org/licenses/by-sa/4.0"
+    showBuiltWith = true
+
+    # https://highlightjs.org
+    highlightjs = true
+    highlightjsstyle = "github"
+
+    # Table of Contents
+    toc = "tocbot"
+
+[params.social]
+    github = "herblover"
+    gravatar = "herblover@gmail.com"
+
+## Main Menu
+[[menu.main]]
+    name = "Posts"
+    weight = 100
+    identifier = "posts"
+    url = "/posts/"
+[[menu.main]]
+    name = "Tags"
+    weight = 200
+    identifier = "tags"
+    url = "/tags/"

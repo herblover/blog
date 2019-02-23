@@ -7,7 +7,6 @@ keywords = ["hugo", "hyde-y", "theme"]
 tags = ["hugo", "theme"]
 title = "Hugo Hyde-Y Theme"
 topics = ["Hugo", "Hyde-Y"]
-type = "post"
 +++
 이 블로그에 적용한 Hyde-Y Theme에 대해 알아보자.
 

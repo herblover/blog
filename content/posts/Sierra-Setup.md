@@ -1,5 +1,4 @@
 +++
-type = "post"
 author = "Kenny Kang"
 description = "Setup new MacOS Sierra from scratch"
 keywords = ["MacOS", "Sierra", "Development", "Environment"]

@@ -1,7 +1,6 @@
 +++
 tags = ["Development","Environment","Zsh","Oh My Zsh"]
 keywords = ["Zsh","Z Shell","Oh My Zsh","Development","Environment"]
-type = "post"
 title = "Z shell with Oh My Zsh Config Guide"
 topics = ["Development Environment Setup", "Mac OS", "Sierra", "Zsh", "Z shell", "Oh My Zsh"]
 description = "Install and Configure Z shell with Oh My Zsh on Mac OS Sierra"
