@@ -15,7 +15,7 @@ summarylength = 30
 paginate = 10
 
 [permalinks]
-    post = "/:year/:month/:day/:slug/"
+    posts = "/:year/:month/:day/:slug/"
     code = "/:slug/"
 
 ## Site Settings
