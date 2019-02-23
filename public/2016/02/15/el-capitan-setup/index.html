@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.54.0" />
+
+    
+    
+    
+
+<title>El Capitan Setup • Kenny&#39;s Blog</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="El Capitan Setup"/>
+<meta name="twitter:description" content="Setup new OS X El Capitan from scratch"/>
+
+<meta property="og:title" content="El Capitan Setup" />
+<meta property="og:description" content="Setup new OS X El Capitan from scratch" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.funspaces.org/2016/02/15/el-capitan-setup/" />
+<meta property="article:published_time" content="2016-02-15T15:32:55&#43;09:00"/>
+<meta property="article:modified_time" content="2016-02-15T15:32:55&#43;09:00"/><meta property="og:site_name" content="Kenny" />
+
+
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/hyde-hyde.6a83d62c39a364f036df4db1ecd564645635d6c7fc182425cb501218fec485f5.css" integrity="sha256-aoPWLDmjZPA2302x7NVkZFY11sf8GCQly1ASGP7EhfU=">
+
+
+<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+
+
+
+
+<link rel="stylesheet" href="/scss/tocbot.126e7d75240acc946d34d6ccb2982ed4c394a5fe34e73e1a2119ca951bcf119d.css" integrity="sha256-Em59dSQKzJRtNNbMspgu1MOUpf405z4aIRnKlRvPEZ0=">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://blog.funspaces.org">Kenny&#39;s Blog</a>
+      </span>
+      
+      
+        <div class="author-image">
+          <img src="https://www.gravatar.com/avatar/d27e059815fc167c428609964d43d9b9?s=240&d=mp" class="img--circle img--headshot element--center" alt="gravatar">
+        </div>
+      
+      <p class="site__description">
+        
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Kenny&#39;s Blog</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/posts/">
+						<span>Posts</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/tags/">
+						<span>Tags</span>
+					</a>
+				</li>
+			 
+		
+		</li>
+	</ul>
+</div>
+
+        <section class="social">
+	
+	
+	
+	<a href="https://github.com/herblover" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    
+<div class="copyright">
+  &copy; 2019 Kenny
+  
+    <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>
+  
+</div>
+
+
+<div class="builtwith">
+Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.com/htr3n/hyde-hyde">hyde-hyde</a>.
+</div>
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    <article>
+  <header>
+    <h1>El Capitan Setup</h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Feb 15, 2016
+    
+    
+    
+    
+    
+      
+      
+          <br/>
+           <i class="fas fa-tags"></i>
+          
+          <a class="badge badge-tag" href="/tags/development">development</a>
+           
+      
+          <a class="badge badge-tag" href="/tags/environment">environment</a>
+          
+      
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 3 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="toc-wrapper">
+    <input type="checkbox" id="tocToggle">
+    <label for="tocToggle">Table of Content</label>
+    
+      <div class="toc" id="TableOfContents"></div>
+    
+  </div>
+  
+  <div class="post">
+    
+
+<h2 id="xcode-설치">XCode 설치</h2>
+
+<p>App Store에서 xcode 설치</p>
+
+<blockquote>
+<p>느릴 경우 <a href="https://developer.apple.com/kr/xcode/downloads/">Xcode Download</a> 에서 다운로드.</p>
+</blockquote>
+
+<p>XCode Command line tools 설치</p>
+
+<pre><code class="language-bash">$ xcode-select --install
+</code></pre>
+
+<h2 id="homebrew-설치-및-homebrew-cask-tap">Homebrew 설치 및 Homebrew Cask Tap</h2>
+
+<p>Homebrew 설치</p>
+
+<blockquote>
+<p><a href="brew.sh">Homebrew</a> 에서 Install Homebrew 참고하여 Terminal에서 설치.</p>
+</blockquote>
+
+<p>2016-02-15 기준은 다음과 같다.</p>
+
+<pre><code class="language-bash">$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+</code></pre>
+
+<p>Homebrew cask 설정</p>
+
+<pre><code class="language-bash">$ brew tap caskroom/cask # homebrew cask enable
+$ brew tap caskroom/versions # homebrew cask alternative versions enable (firefoxdeveloperedition)
+$ brew tap caskroom/fonts # homebrew cask for fonts
+$ brew tap homebrew/dupes # homebrew for system duplicate formulae
+</code></pre>
+
+<p>iTerm2 설치</p>
+
+<pre><code class="language-bash">$ brew cask install iterm2
+</code></pre>
+
+<h2 id="기본-쉘을-zsh로-변경하기">기본 쉘을 ZSH로 변경하기</h2>
+
+<p>zsh를 homebrew 버전으로 설치 후 oh-my-zsh 설치. dot files 관리용 yadm 설치 및 설정</p>
+
+<pre><code class="language-bash">$ brew install zsh
+$ echo &quot;/usr/local/bin/zsh&quot; | sudo tee -a /etc/shells
+$ chsh -s $(which zsh) # 이후 터미널 리스타드
+$ sh -c &quot;$(curl -fsSL https://raw.github.c om/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;
+$ brew tap TheLocehiliosan/yadm &amp;&amp; brew install yadm
+$ yadm init
+$ yadm add .zshrc
+$ yadm commit
+</code></pre>
+
+<h2 id="gnu-버전-시스템-유틸리티-설치">GNU 버전 시스템 유틸리티 설치</h2>
+
+<p>기본 System Utility를 GNU 버전으로 변경</p>
+
+<pre><code class="language-bash">$ brew install gnu-sed --with-default-names
+$ brew install gnu-tar --with-default-names
+$ brew install gnutls --with-default-names
+$ brew install grep --with-default-names
+$ brew install coreutils
+$ brew install binutils
+$ brew install diffutils
+$ brew install gzip
+$ brew install watch
+$ brew install tmux
+$ brew install wget
+$ brew install nmap
+$ brew install gpg
+$ brew install htop
+$ brew install macvim --with-override-system-vim
+$ brew linkapps macvim
+</code></pre>
+
+<h2 id="기본-os-x-어플리케이션-설치">기본 OS X 어플리케이션 설치</h2>
+
+<p>기본적으로 사용할 OS X 어플리케이션 설치</p>
+
+<pre><code class="language-bash">$ brew cask install iterm2
+$ brew cask install google-chrome
+$ brew cask install firefoxdeveloperedition
+$ brew cask install java
+</code></pre>
+
+<h2 id="homebrew-cask로-폰트-설치하기">Homebrew cask로 폰트 설치하기</h2>
+
+<p>여기서부터 <strong>iterm2</strong> 로 작업</p>
+
+<pre><code class="language-bash">$ brew cask install font-nanumgothic
+$ brew cask install font-nanumgothiccoding
+$ brew cask install font-d2coding
+</code></pre>
+
+<h2 id="자바-개발용-프로그램-설치">자바 개발용 프로그램 설치</h2>
+
+<pre><code class="language-bash">$ brew cask install intellij-idea # intellij-idea 설치. ce 버전을 원하면 brew cask install inteillj-idea-ce
+</code></pre>
+
+<h2 id="루비-개발용-프로그램-설치">루비 개발용 프로그램 설치</h2>
+
+<pre><code class="language-bash">$ brew install rbenv ruby-build
+</code></pre>
+
+<p>.zshrc 파일에서 <strong>plugin</strong> 부분을 찾아 <strong>rbenv</strong> 추가 후 iterm 재시작.</p>
+
+<pre><code class="language-bash">$ yadm add .zshrc
+$ yadm commit
+$ rbenv install 2.3.0
+$ brew cask install rubymine
+</code></pre>
+
+<h2 id="파이썬-개발용-프로그램-설치">파이썬 개발용 프로그램 설치</h2>
+
+<pre><code class="language-bash">$ brew install python
+$ pip install virtualenv virtualenvwrapper autoenv
+$ mkdir -p ~/workspaces/virtualenvs
+$ echo &quot;export WORKON_HOME=$HOME/workspaces/virtualenvs&quot; &gt;&gt; ~/.zshenv
+$ echo &quot;export PIP_VIRTUALENV_BASE=\$WORKON_HOME&quot; &gt;&gt; ~/.zshenv
+$ yadm add .zshenv
+$ yadm commit
+</code></pre>
+
+<p>.zshrc 파일에서 <strong>plugin</strong> 부분을 찾아 <strong>virtualenv virtualenvwrapper autoenv</strong> 추가 후 iterm 재시작.</p>
+
+<pre><code class="language-bash">$ yadm add .zshrc
+$ yadm commit
+</code></pre>
+
+<h2 id="brew-cask-upgrade-function">Brew Cask Upgrade Function</h2>
+
+<p>Brew Cask를 통해서 설치한 프로그램들은 업그레이드 관련하여 이슈가 있다. 관련하여 다음을 참고하자.</p>
+
+<ul>
+<li><a href="https://github.com/caskroom/homebrew-cask/issues/309">brew cask upgrade</a></li>
+<li><a href="https://github.com/caskroom/homebrew-cask/issues/4678">Draft Roadmap: <code>brew cask upgrade</code></a></li>
+<li><a href="https://github.com/caskroom/homebrew-cask/issues/13201">Changes to homebrew-cask installation behavior</a></li>
+</ul>
+
+<p>사람마다 추천하는 업그레이드 방법이 다르지만, 개인적으로는 brew-cask-upgrade 라는 shell function을 이용 중이다.</p>
+
+<pre><code class="language-bash">brew-cask-upgrade() {
+  if [ &quot;$1&quot; != '--continue' ]; then
+    echo &quot;Removing brew cache&quot;
+    rm -rf &quot;$(brew --cache)&quot;
+    echo &quot;Running brew update&quot;
+    brew update
+  fi
+  for c in $(brew cask list); do
+    echo -e &quot;\n\nInstalled versions of $c: &quot;
+    ls /opt/homebrew-cask/Caskroom/$c
+    echo &quot;Cask info for $c&quot;
+    brew cask info $c
+    select ynx in &quot;Yes&quot; &quot;No&quot; &quot;Exit&quot;; do
+      case $ynx in
+        &quot;Yes&quot;) echo &quot;Uninstalling $c&quot;; brew cask uninstall --force &quot;$c&quot;; echo &quot;Re-installing $c&quot;; brew cask install &quot;$c&quot;; break;;
+        &quot;No&quot;) echo &quot;Skipping $c&quot;; break;;
+        &quot;Exit&quot;) echo &quot;Exiting brew-cask-upgrade&quot;; return;;
+      esac
+    done
+  done
+}
+</code></pre>
+
+<p>위 코드를 ~/.zshrc 마지막에 넣고, 새 shell을 실행 시킨 후, brew-cask-upgrade 명령을 내리면 업그레이드 절차가 진행된다. 다만, Version이 latest일 경우에는 버전 비교가 안되니 이 경우에는 수동으로 uninstall 후 install 해 줘야 한다.</p>
+
+<p>이런 절차가 복잡하고 귀찮거나, 루비 개발자의 경우에는 <a href="https://github.com/buo/brew-cask-upgrade">brew-cask-upgrade gem</a>을 이용하는 방법을 선택할 수 있다.</p>
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    
+    <a href="/2016/02/15/hugo-hyde-y-theme/" class="navigation-next">
+      <span class="navigation-tittle">Hugo Hyde-Y Theme</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
+    
+</div>
+
+
+  
+
+  
+    
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+
+    (function () {
+    if (location.hostname === "localhost" ||
+      location.hostname === "127.0.0.1" ||
+      location.hostname === "") {
+      return;
+    }
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    var disqus_shortname = 'kennygithub';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || 
+      document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<noscript>
+  Please enable JavaScript to view the
+  <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by
+  <span class="logo-disqus">Disqus</span>
+</a>
+
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-71902268-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+
+    
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+        
+    
+    <script type="text/javascript">
+        
+        hljs.initHighlightingOnLoad();
+    </script>
+    
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.js"></script>
+<script type="text/javascript">
+  if (tocbot) {
+    tocbot.init({
+      
+      tocSelector: '.toc',
+      
+      contentSelector: '.post',
+      
+      headingSelector: 'h2, h3, h4',
+      collapseDepth: 4
+    });
+  }
+</script>
+
+
+
+    
+
+
+
+    </body>
+</html>

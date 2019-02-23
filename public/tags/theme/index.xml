@@ -13,10 +13,10 @@
     
     <item>
       <title>Hugo Hyde-Y Theme</title>
-      <link>https://blog.funspaces.org/posts/hyde-y-theme/</link>
+      <link>https://blog.funspaces.org/2016/02/15/hugo-hyde-y-theme/</link>
       <pubDate>Mon, 15 Feb 2016 16:45:16 +0900</pubDate>
       
-      <guid>https://blog.funspaces.org/posts/hyde-y-theme/</guid>
+      <guid>https://blog.funspaces.org/2016/02/15/hugo-hyde-y-theme/</guid>
       <description>이 블로그에 적용한 Hyde-Y Theme에 대해 알아보자.
 시작은 야심차게 테마설정법으로 시작했는데, 결국은 Hyde-Y 공식 Readme.md 파일을 일부 번역한게 되어 버렸다. OTL
 Hugo? Hugo는 Go로 작성한 정적 웹사이트 생성기이다. 자세한 사항은 Made by HUGO and GitHub Pages를 참고하자.</description>

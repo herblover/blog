@@ -13,48 +13,48 @@
     
     <item>
       <title>Z shell with Oh My Zsh Config Guide</title>
-      <link>https://blog.funspaces.org/posts/zsh-config-guide/</link>
+      <link>https://blog.funspaces.org/2017/02/13/z-shell-with-oh-my-zsh-config-guide/</link>
       <pubDate>Mon, 13 Feb 2017 19:08:26 +0900</pubDate>
       
-      <guid>https://blog.funspaces.org/posts/zsh-config-guide/</guid>
+      <guid>https://blog.funspaces.org/2017/02/13/z-shell-with-oh-my-zsh-config-guide/</guid>
       <description>시작하며 MacOS로 작업하는 개발자들이 늘어나고, JavaScript/Python/Ruby등을 사용하는 프로그래머들이 늘어나면서 Shell 작업이 다시 수면위로 떠오른 지 몇년이 지났다. Github 이후로는 많은 프로젝트가 Git으로 작업하고 있는데, Git를 사용하다 보면 별도 설치해서 사용하는 GUI Client들이 생각보다 불편한 경우가 많아 Shell로 돌아오는 분위기이다.</description>
     </item>
     
     <item>
       <title>Fix windows 7 update issue</title>
-      <link>https://blog.funspaces.org/posts/fix-windows-7-update-issue/</link>
+      <link>https://blog.funspaces.org/2016/12/27/fix-windows-7-update-issue/</link>
       <pubDate>Tue, 27 Dec 2016 15:55:09 +0900</pubDate>
       
-      <guid>https://blog.funspaces.org/posts/fix-windows-7-update-issue/</guid>
+      <guid>https://blog.funspaces.org/2016/12/27/fix-windows-7-update-issue/</guid>
       <description>온라인 뱅킹과 ActiveX 만 지원하는 사이트를 위해 Hyper-V로 Windows 7 SP1을 설치했더니 왠걸?! 업데이트가 되지 않는다. 윈도우 업데이트에서는 업데이트 대상을 찾는다고 시간만 보내다가 업데이트를 찾을 수 없다는 오류만 뜬다. 관련하여 검색을 해 보다가, WINDOWS 7 WON’T UPDATE?</description>
     </item>
     
     <item>
       <title>Sierra Setup</title>
-      <link>https://blog.funspaces.org/posts/sierra-setup/</link>
+      <link>https://blog.funspaces.org/2016/12/09/sierra-setup/</link>
       <pubDate>Fri, 09 Dec 2016 15:02:51 +0900</pubDate>
       
-      <guid>https://blog.funspaces.org/posts/sierra-setup/</guid>
+      <guid>https://blog.funspaces.org/2016/12/09/sierra-setup/</guid>
       <description>OS X가 MacOS로 이름을 바꾸고 Homebrew 버전이 올라가면서 관련 설치 및 설정이 많이 간소화 되었다. 따라서 새로운 방법에 맞춰 처음 MacBook등을 받았을 때 개발환경 구축과정을 블로그에 남긴다.
 Homebrew 설치 Homebrew 공식 페이지를 참고하여 Terminal에서 설치한다.</description>
     </item>
     
     <item>
       <title>NTFS for mac</title>
-      <link>https://blog.funspaces.org/posts/ntfs-for-mac/</link>
+      <link>https://blog.funspaces.org/2016/12/04/ntfs-for-mac/</link>
       <pubDate>Sun, 04 Dec 2016 16:28:04 +0900</pubDate>
       
-      <guid>https://blog.funspaces.org/posts/ntfs-for-mac/</guid>
+      <guid>https://blog.funspaces.org/2016/12/04/ntfs-for-mac/</guid>
       <description>MacOS Sierra 에서 외장 하드 / USB 드라이브 사용을 위해 NTFS 쓰기를 활성화 시키는 방법.
 Mounty for NTFS를 이용하는 방법 한참 아래 항목인 /etc/fstab파일로 NTFS 쓰기모드를 활성화 하는 방법을 적고 나니, 동일한 일을 해 주는 Mounty를 발견 했다.</description>
     </item>
     
     <item>
       <title>El Capitan Setup</title>
-      <link>https://blog.funspaces.org/posts/el-capitan-setup/</link>
+      <link>https://blog.funspaces.org/2016/02/15/el-capitan-setup/</link>
       <pubDate>Mon, 15 Feb 2016 15:32:55 +0900</pubDate>
       
-      <guid>https://blog.funspaces.org/posts/el-capitan-setup/</guid>
+      <guid>https://blog.funspaces.org/2016/02/15/el-capitan-setup/</guid>
       <description>XCode 설치 App Store에서 xcode 설치
  느릴 경우 Xcode Download 에서 다운로드.
  XCode Command line tools 설치

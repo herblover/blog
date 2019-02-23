@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.54.0" />
+
+    
+    
+    
+
+<title>Fix windows 7 update issue • Kenny&#39;s Blog</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Fix windows 7 update issue"/>
+<meta name="twitter:description" content="Fix windows 7 Windows Update Issue"/>
+
+<meta property="og:title" content="Fix windows 7 update issue" />
+<meta property="og:description" content="Fix windows 7 Windows Update Issue" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.funspaces.org/2016/12/27/fix-windows-7-update-issue/" />
+<meta property="article:published_time" content="2016-12-27T15:55:09&#43;09:00"/>
+<meta property="article:modified_time" content="2016-12-27T15:55:09&#43;09:00"/><meta property="og:site_name" content="Kenny" />
+
+
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/hyde-hyde.6a83d62c39a364f036df4db1ecd564645635d6c7fc182425cb501218fec485f5.css" integrity="sha256-aoPWLDmjZPA2302x7NVkZFY11sf8GCQly1ASGP7EhfU=">
+
+
+<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+
+
+
+
+<link rel="stylesheet" href="/scss/tocbot.126e7d75240acc946d34d6ccb2982ed4c394a5fe34e73e1a2119ca951bcf119d.css" integrity="sha256-Em59dSQKzJRtNNbMspgu1MOUpf405z4aIRnKlRvPEZ0=">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://blog.funspaces.org">Kenny&#39;s Blog</a>
+      </span>
+      
+      
+        <div class="author-image">
+          <img src="https://www.gravatar.com/avatar/d27e059815fc167c428609964d43d9b9?s=240&d=mp" class="img--circle img--headshot element--center" alt="gravatar">
+        </div>
+      
+      <p class="site__description">
+        
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Kenny&#39;s Blog</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/posts/">
+						<span>Posts</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/tags/">
+						<span>Tags</span>
+					</a>
+				</li>
+			 
+		
+		</li>
+	</ul>
+</div>
+
+        <section class="social">
+	
+	
+	
+	<a href="https://github.com/herblover" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    
+<div class="copyright">
+  &copy; 2019 Kenny
+  
+    <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>
+  
+</div>
+
+
+<div class="builtwith">
+Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.com/htr3n/hyde-hyde">hyde-hyde</a>.
+</div>
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    <article>
+  <header>
+    <h1>Fix windows 7 update issue</h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Dec 27, 2016
+    
+    
+    
+    
+    
+      
+      
+          <br/>
+           <i class="fas fa-tags"></i>
+          
+          <a class="badge badge-tag" href="/tags/development">development</a>
+           
+      
+          <a class="badge badge-tag" href="/tags/environment">environment</a>
+           
+      
+          <a class="badge badge-tag" href="/tags/windows-7">windows 7</a>
+          
+      
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 2 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="toc-wrapper">
+    <input type="checkbox" id="tocToggle">
+    <label for="tocToggle">Table of Content</label>
+    
+      <div class="toc" id="TableOfContents"></div>
+    
+  </div>
+  
+  <div class="post">
+    
+
+<p>온라인 뱅킹과 ActiveX 만 지원하는 사이트를 위해 Hyper-V로 Windows 7 SP1을 설치했더니 왠걸?! 업데이트가 되지 않는다. 윈도우 업데이트에서는 업데이트 대상을 찾는다고 시간만 보내다가 업데이트를 찾을 수 없다는 오류만 뜬다.
+관련하여 검색을 해 보다가, <a href="http://plugable.com/2016/06/08/windows-7-wont-update-what-to-do/">WINDOWS 7 WON’T UPDATE? HERE’S WHAT TO DO</a>라는 좋은 글을 찾아 요약 및 향후 설치에 적용하기 위해 정리해 본다.
+추가로, reddit windows에 있는 <a href="https://www.reddit.com/r/windows/comments/4tx4s9/windows_7_slowstuck_checking_for_updates_fix_as/">Windows 7 Slow/Stuck &lsquo;Checking For Updates&rsquo; FIX (as of July 2016)</a>의 내용까지 합쳐서 정리했다.</p>
+
+<h2 id="배경지식">배경지식</h2>
+
+<p>윈도우 7은 일반지원은 모두 종료되었다. (SP1 적용 전 버전은 2013년 4월 9일로 종료, SP1은 2015년 1월 13일로 종료) 다만 이는 기능 업데이트나 전화지원등이 종료된다는 의미이고, 보안 패치를 제공하는 연장지원은 2020년 1월 14일 까지 제공된다. (SP1만 가능)
+아직도 몇몇 은행과 정부 사이트를 이용할 때 Windows 10으로는 불편함이 있는 관계로, Windows 10 Pro에 내장된 Hyper-V 를 이용하여 Windows 7 SP1을 설치해서 사용하려고 하니 윈도우 업데이트에서 계속 에러가 떠서 원인을 찾아보게 됐다.</p>
+
+<h2 id="시작-전에">시작 전에</h2>
+
+<p>당연하게도 사용중인 Windows 7(앞으로 SP1은 생략한다. 이후로 나오는 모든 Windows 7은 Windows 7 SP1을 지칭한다.)이 32bit(x86)인지 64bit(x64)인지 확인부터 해야 한다. 보통 <code>컴퓨터</code>의 <code>등록정보</code>에 가 보면 확인할 수 있다. 해당 창에서 SP1 설치 여부도 확인한다.</p>
+
+<p><img src="/images/fix_windows_7_update_issue/win7_control_panel_1.png" alt="시스템" /></p>
+
+<p>노트북의 경우에는 <code>전원 옵션</code>에서 <code>고성능</code>을 선택하여 업데이트 도중 잠자기 모드에 들어가지 않도록 한다.</p>
+
+<p><img src="/images/fix_windows_7_update_issue/win7_control_panel_2.png" alt="전원 옵션" /></p>
+
+<h2 id="간편-롤업-https-support-microsoft-com-ko-kr-kb-3125574-업데이트-설치"><a href="https://support.microsoft.com/ko-kr/kb/3125574">간편 롤업</a>업데이트 설치</h2>
+
+<p><a href="https://support.microsoft.com/ko-kr/kb/3125574">간편 롤업</a> 업데이트로 SP1 이후 2016년 4월까지 나온 업데이트 중 중요한 항목들을 한번에 설치하자. 다만 해당 업데이트 적용 전 다음 업데이트를 먼저 설치해야 한다.</p>
+
+<ul>
+<li><a href="https://support.microsoft.com/ko-kr/kb/3020369">KB3020369</a></li>
+</ul>
+
+<p><a href="https://support.microsoft.com/ko-kr/kb/3020369">KB3020369</a>를 설치하고 나면 윈도우 재부팅 후 <a href="https://support.microsoft.com/ko-kr/kb/3125574">간편 롤업</a> 업데이트를 설치한다.</p>
+
+<ul>
+<li><a href="https://support.microsoft.com/ko-kr/kb/3125574">KB3125574</a></li>
+</ul>
+
+<p>설치가 완료되면 재부팅.</p>
+
+<h2 id="windows-update-client-패치">Windows Update Client 패치</h2>
+
+<p>기본 설치가 완료되면 Windows Update Client 패치를 설치한다.
+앞으로 모든 패치 설치 후 재부팅 한다.</p>
+
+<ul>
+<li><a href="https://support.microsoft.com/ko-kr/kb/3138612">KB3138612</a></li>
+</ul>
+
+<h2 id="ms16-039-windows-그래픽-구성요소용-보안-업데이트-https-support-microsoft-com-ko-kr-kb-3145739-설치"><a href="https://support.microsoft.com/ko-kr/kb/3145739">MS16-039: Windows 그래픽 구성요소용 보안 업데이트</a> 설치</h2>
+
+<ul>
+<li><a href="https://support.microsoft.com/ko-kr/kb/3145739">KB3145739</a></li>
+</ul>
+
+<h2 id="월별-보안-업데이트-최신-버전-https-support-microsoft-com-ko-kr-kb-3207752-설치"><a href="https://support.microsoft.com/ko-kr/kb/3207752">월별 보안 업데이트 최신 버전</a> 설치</h2>
+
+<p>처음 참고했던 문서에서는 이 패치를 월별로 설치하도록 가이드 했다. Reddit 문서 및 MS 공식 문서 확인 결과 최종 버전만 설치하면 된다.</p>
+
+<ul>
+<li><a href="https://support.microsoft.com/ko-kr/kb/3207752">KB3207752</a></li>
+</ul>
+
+<h2 id="맺음말">맺음말</h2>
+
+<p>여기까지 설치 후 재부팅 하면 Windows Update가 정상 동작 한다.</p>
+
+<p>문서 내에 있는 링크들은 전부 MS의 Support 페이지로 링크가 되어 있으나, 이 링크들이 자주 깨진다는 이야기가 Reddit에 있었다. 또한, 최근 MS의 Support 페이지는 IE8 (Windows 7 SP1 기본 브라우저)을 지원하지 않아 방금 설치한 Windows 7에서 패치 파일을 다운로드 받는데 어려움이 있다. 따라서 아래에 Windows Update Catalog 링크로 별도 정리한다.</p>
+
+<ul>
+<li><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB3020369">KB3020369</a></li>
+<li><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB3125574">KB3125574</a></li>
+<li><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB3138612">KB3138612</a></li>
+<li><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB3145739">KB3145739</a></li>
+<li><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=kb3207752">KB3207752</a></li>
+</ul>
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="/2016/12/09/sierra-setup/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">Sierra Setup</span>
+    </a>
+    
+    
+    <a href="/2017/02/13/z-shell-with-oh-my-zsh-config-guide/" class="navigation-next">
+      <span class="navigation-tittle">Z shell with Oh My Zsh Config Guide</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
+    
+</div>
+
+
+  
+
+  
+    
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+
+    (function () {
+    if (location.hostname === "localhost" ||
+      location.hostname === "127.0.0.1" ||
+      location.hostname === "") {
+      return;
+    }
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    var disqus_shortname = 'kennygithub';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || 
+      document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<noscript>
+  Please enable JavaScript to view the
+  <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by
+  <span class="logo-disqus">Disqus</span>
+</a>
+
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-71902268-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+
+    
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+        
+    
+    <script type="text/javascript">
+        
+        hljs.initHighlightingOnLoad();
+    </script>
+    
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.js"></script>
+<script type="text/javascript">
+  if (tocbot) {
+    tocbot.init({
+      
+      tocSelector: '.toc',
+      
+      contentSelector: '.post',
+      
+      headingSelector: 'h2, h3, h4',
+      collapseDepth: 4
+    });
+  }
+</script>
+
+
+
+    
+
+
+
+    </body>
+</html>

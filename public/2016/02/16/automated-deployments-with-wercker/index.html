@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.54.0" />
+
+    
+    
+    
+
+<title>Automated Deployments with Wercker • Kenny&#39;s Blog</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Automated Deployments with Wercker"/>
+<meta name="twitter:description" content="Automated Deployments with Wercker"/>
+
+<meta property="og:title" content="Automated Deployments with Wercker" />
+<meta property="og:description" content="Automated Deployments with Wercker" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.funspaces.org/2016/02/16/automated-deployments-with-wercker/" />
+<meta property="article:published_time" content="2016-02-16T14:13:53&#43;09:00"/>
+<meta property="article:modified_time" content="2016-02-16T14:13:53&#43;09:00"/><meta property="og:site_name" content="Kenny" />
+
+
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/hyde-hyde.6a83d62c39a364f036df4db1ecd564645635d6c7fc182425cb501218fec485f5.css" integrity="sha256-aoPWLDmjZPA2302x7NVkZFY11sf8GCQly1ASGP7EhfU=">
+
+
+<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+
+
+
+
+<link rel="stylesheet" href="/scss/tocbot.126e7d75240acc946d34d6ccb2982ed4c394a5fe34e73e1a2119ca951bcf119d.css" integrity="sha256-Em59dSQKzJRtNNbMspgu1MOUpf405z4aIRnKlRvPEZ0=">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://blog.funspaces.org">Kenny&#39;s Blog</a>
+      </span>
+      
+      
+        <div class="author-image">
+          <img src="https://www.gravatar.com/avatar/d27e059815fc167c428609964d43d9b9?s=240&d=mp" class="img--circle img--headshot element--center" alt="gravatar">
+        </div>
+      
+      <p class="site__description">
+        
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Kenny&#39;s Blog</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/posts/">
+						<span>Posts</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/tags/">
+						<span>Tags</span>
+					</a>
+				</li>
+			 
+		
+		</li>
+	</ul>
+</div>
+
+        <section class="social">
+	
+	
+	
+	<a href="https://github.com/herblover" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    
+<div class="copyright">
+  &copy; 2019 Kenny
+  
+    <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>
+  
+</div>
+
+
+<div class="builtwith">
+Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.com/htr3n/hyde-hyde">hyde-hyde</a>.
+</div>
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    <article>
+  <header>
+    <h1>Automated Deployments with Wercker</h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Feb 16, 2016
+    
+    
+    
+    
+    
+      
+      
+          <br/>
+           <i class="fas fa-tags"></i>
+          
+          <a class="badge badge-tag" href="/tags/hugo">hugo</a>
+           
+      
+          <a class="badge badge-tag" href="/tags/wercker">wercker</a>
+           
+      
+          <a class="badge badge-tag" href="/tags/github-pages">github-pages</a>
+          
+      
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 5 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="toc-wrapper">
+    <input type="checkbox" id="tocToggle">
+    <label for="tocToggle">Table of Content</label>
+    
+      <div class="toc" id="TableOfContents"></div>
+    
+  </div>
+  
+  <div class="post">
+    
+
+<p>기본 Hugo 프로젝트를 만들고 Wercker를 이용해 자동으로 Github-Pages에 배포하는 작업을 해 보자. 역시나 이 글도 Hugo 공식 문서에 있는 <a href="http://gohugo.io/tutorials/automated-deployments/">Automated deployments with Wercker</a>의 일부 내용 번역과, 직접 해 보면서 느낀 부분들을 첨언하는 것에 중점을 두려고 한다.</p>
+
+<h2 id="hugo-site-생성">Hugo Site 생성</h2>
+
+<p>Github-Pages, Wercker, Hugo Site Builder를 이용하려면 일단 Hugo Site를 만들어야 한다. Hugo 설치 및 기본 사용법들은 <a href="http://brannpark.github.io/blog/posts/20151201_hugo_with_github_pages/">Made by HUGO and Github Pages</a>에 상세하게 설명 되어 있으니 기본적인 커맨드들로 진행한다.</p>
+
+<pre><code class="language-bash">$ hugo new site hugo-sample
+$ cd hugo-sample
+</code></pre>
+
+<p>사이트 전체에 사용될 테마를 선택하여 적용한다. 여기서는 <a href="https://github.com/enten/hyde-y">Hyde-Y</a> 테마를 골랐다.</p>
+
+<pre><code class="language-bash">$ mkdir themes
+$ cd themes
+$ git clone https://github.com/enten/hyde-y.git
+</code></pre>
+
+<p>Git에서 충돌나는 것을 방지하기 위해 hyde-y 테마 안의 git repository는 제거해 주자. 색상 테마 변경시에도 제거해 주는 쪽이 편리하다.</p>
+
+<pre><code class="language-bash">$ rm -rf hyde-y/.git
+</code></pre>
+
+<p>새 페이지를 추가 하기 전에, Hyde-Y 테마에 맞는 기본 설정들을 추가하자</p>
+
+<pre><code class="language-bash">$ cd ..
+# config.toml 수정하기
+</code></pre>
+
+<pre><code class="language-toml">baseurl = &quot;http://www.example.com&quot; # 원하는 주소로 변경
+title = &quot;sitename&quot; # 원하는 사이트 명으로 변경
+copyright = &quot;(c) 2016 yourname.&quot; # 저작권 표시
+languageCode = &quot;ko-kr&quot; # 한국어 사용
+metaDataFormat = &quot;toml&quot; # 메타데이터 파일 형식
+theme = &quot;hyde-y&quot; # 사용할 테마명
+
+# 페이징 설정
+paginate = 10
+paginatePath = &quot;page&quot;
+
+# Disqus 연동 설정. (댓글 기능 제공용)
+disqusShortname = &quot;your_disqus_shortname&quot;
+
+[permalinks]
+  post = &quot;/:year/:month/:day/:slug/&quot;
+  code = &quot;/:slug/&quot;
+
+[taxonomies]
+  tag = &quot;tags&quot;
+  topic = &quot;topics&quot;
+
+[author]
+  name = &quot;yourname&quot;
+  email = &quot;yourname@example.com&quot;
+
+# 이 아래로는 옵션들.
+[params]
+  # 여긴 Markdown 문법 사용 가능
+  brand = &quot;foobar&quot;
+  topline = &quot;few words about your site&quot;
+  footline = &quot;code with &lt;i class='fa fa-heart'&gt;&lt;/i&gt;&quot;
+
+  # 사이드 바 위치 설정
+  # false, true, &quot;left&quot;, &quot;right&quot;
+  sidebar = &quot;left&quot;
+
+  # 사이트 루트로 가는 링크 이름 정하기.
+  # 생략시 기본값은 &quot;Home&quot;.
+  home = &quot;home&quot;
+
+  # 코드 하일라이트 테마 선택
+  # static/css/highlight 디렉토리에서 옵션 확인.
+  highlight = &quot;default&quot;
+
+  # Google Analytics.
+  googleAnalytics = &quot;Your Google Analytics tracking code.&quot;
+
+  # 사이드바 소셜 링크
+  github = &quot;enten/hugo-boilerplate&quot; # Your Github profile ID
+  bitbucket = &quot;&quot; # Your Bitbucket profile ID
+  linkedin = &quot;&quot; # Your LinkedIn profile ID (from public URL)
+  googleplus = &quot;&quot; # Your Google+ profile ID
+  facebook = &quot;&quot; # Your Facebook profile ID
+  twitter = &quot;&quot; # Your Twitter profile ID
+  youtube = &quot;&quot; # Your Youtube channel ID
+  flattr = &quot;&quot; # populate with your flattr uid
+
+[blackfriday]
+  angledQuotes = true
+  fractions = false
+  hrefTargetBlank = false
+  latexDashes = true
+  plainIdAnchors = true
+  extensions = []
+  extensionmask = []
+</code></pre>
+
+<p>이제 사이드바에 표시될 링크를 설정한다. 사이드바에 나타날 메뉴는 <code>data/Menu.toml</code>에서 설정할 수 있다.</p>
+
+<pre><code class="language-toml">[about]
+  Name = &quot;About&quot;
+  URL = &quot;/about&quot;
+[posts]
+  Name = &quot;Posts&quot;
+  Title = &quot;Show list of posts&quot;
+  URL = &quot;/post&quot;
+[tags]
+  Name = &quot;Tags&quot;
+  Title = &quot;Show list of tags&quot;
+  URL = &quot;/tags&quot;
+</code></pre>
+
+<p>마지막으로 Footer 에 나올 메뉴를 설정한다. Footer 메뉴는 <code>data/FootMenu.toml</code>에서 설정할 수 있다.</p>
+
+<pre><code class="language-toml">[license]
+  Name = &quot;license&quot;
+  URL = &quot;/license&quot;
+</code></pre>
+
+<p>설정이 완료되면 간단하게 about 페이지를 추가 해 보자.</p>
+
+<pre><code class="language-bash">$ hugo new about.md
+</code></pre>
+
+<p>About 페이지를 임시상태에서 해제하고, 몇 마디 넣어 보자.</p>
+
+<pre><code class="language-bash">$ hugo undraft content/about.md
+</code></pre>
+
+<p>다 끝나면, hugo 서버를 띄워서 브라우저에서 확인해 볼 수 있다.</p>
+
+<pre><code class="language-bash">$ hugo server
+</code></pre>
+
+<p>별 문제없이 모든 설정이 완료되면, localhost:1313 으로 접속했을 때 다음과 같은 페이지가 나온다.</p>
+
+<p><img src="/images/automated_deployments_with_wercker/screenshot01.png" alt="기본 홈페이지" /></p>
+
+<p>Hugo 커맨드를 실행해서 서버에 올라갈 파일들을 생성 해 보자.</p>
+
+<pre><code class="language-bash">$ hugo
+</code></pre>
+
+<h2 id="버전-컨트롤-세팅">버전 컨트롤 세팅</h2>
+
+<p>기본 작업이 끝난 Hugo 사이트를 Git에 추가하자.</p>
+
+<pre><code class="language-bash">$ git init
+</code></pre>
+
+<p><code>git status</code>라고 입력하면 <strong>config.toml</strong> 파일, <strong>content/</strong> 디렉토리, <strong>data/</strong> 디렉토리, <strong>themes/</strong> 디렉토리, <strong>public/</strong> 디렉토리가 표시된다.
+<strong>public</strong> 디렉토리는 hugo가 생성한 컨텐츠가 들어가는 곳이니, 버전 컨트롤에 넣을 필요는 없다. 제외해 주자.</p>
+
+<pre><code class="language-bash">$ echo &quot;/public&quot; &gt;&gt; .gitignore
+</code></pre>
+
+<p>아직 static 디렉토리에 파일이 없어서 버전 컨트롤에 등록이 안된다. static 디렉토리가 없으면 이후 작업에서 에러가 나면서 정상 빌드가 안된다.
+구글 등 검색엔진이 확인할 수 있는 robots.txt 파일을 추가하자.</p>
+
+<pre><code class="language-bash">$ echo &quot;User-agent: *\nDisallow:&quot; &gt; static/robots.txt
+</code></pre>
+
+<p>다 끝나면, 리포지트리에 커밋하자.</p>
+
+<pre><code class="language-bash">$ git add .
+$ git commit -a -m &quot;Initial Commit&quot;
+</code></pre>
+
+<h2 id="github-연동하기">Github 연동하기</h2>
+
+<p>Github에 새 프로젝트를 만들고, 방금 까지 작업한 Hugo Site와 연결하자. Github 프로젝트 생성 후 clone url을 복사 한 후에 연결하면 된다.</p>
+
+<pre><code class="language-bash">$ git remote add origin git@github.com:YourUsername/hugo-sample.git
+$ git push -u origin master
+</code></pre>
+
+<h2 id="wercker-개요">Wercker 개요</h2>
+
+<p>Wercker는 Docker 기반의 빌드 및 배포 도구이다. 작성한 코드를 Git Repo에 Push 하면, wercker.yml 설정에 따라 이후 작업을 수행하도록 되어 있다. 다양한 용도로 활용할 수 있지만, 이 글에서는 Wercker를 통해 Hugo 블로그 컨텐츠를 빌드하고, Github Pages에 배포하는데에만 집중한다.</p>
+
+<h2 id="wercker-설정">Wercker 설정</h2>
+
+<p><a href="http://wercker.com">Wercker</a> 사이트에 Github 계정으로 회원 가입을 하고, Github 권한을 주도록 하자.</p>
+
+<p>로그인 후에 좌상단에 있는 초록색 **+ Create **버튼을 클릭하고, Application 을 선택하면 내 Github 계정에서 접근 가능한 리포지트리가 뜬다. 좀 전에 만든 리포지트리를 선택하고, <strong>Use selected repo</strong>를 선택한다. 이후 화면에 표시되는 대로 <strong>Next Step</strong>을 클릭하면 기본 준비가 끝난다.</p>
+
+<p>어플리케이션이 준비되면, 이제 wercker.yml파일로 빌드 절차를 기록할 차례다.</p>
+
+<h2 id="wercker-yml">wercker.yml</h2>
+
+<p>Hugo site root에 다음과 같이 wercker.yml 파일을 만든다. 빌드할 때는 arjen/hugo-build 이미지를 이용한다.</p>
+
+<pre><code class="language-yaml">box: debian
+build:
+  steps:
+    - arjen/hugo-build:
+      version: &quot;0.15&quot;
+      theme: hyde-y
+      flags: --buildDrafts=false
+</code></pre>
+
+<p>이제 github에 push 하면 wercker가 자동으로 사이트를 빌드한다.</p>
+
+<pre><code class="language-bash">$ git add .
+$ git commit -a -m &quot;wercker.yml added.&quot;
+$ git push
+</code></pre>
+
+<h2 id="wercker로-배포하기">wercker로 배포하기</h2>
+
+<p>지금까지 작업으로 wercker build 까지 완료했다. 이제 github-pages 로 배포할 차례다.</p>
+
+<p>배포할 때는 lukevivier/gh-pages 이미지를 이용한다. 아까 만든 wercker.yml에 배포 관련 내용을 추가한다.</p>
+
+<pre><code class="language-yaml">box: debian
+build:
+  steps:
+    - arjen/hugo-build:
+      version: &quot;0.15&quot;
+      theme: hyde-y
+      flags: --buildDrafts=false
+deploy:
+  steps:
+    - install-packages:
+      packages: git ssh-client
+    - lukevivier/gh-pages@0.2.1:
+      token: $GIT_TOKEN
+      basedir: public
+</code></pre>
+
+<p>deploy 스텝에서 $GIT_TOKEN 부분은, 배포할 때 필요한 Github Token을 환경변수 형태로 전달 받았다는 의미다. 이 값은, Github 쪽에서 생성해야 한다.</p>
+
+<p>일단 <strong><a href="https://github.com/settings/tokens">Github Personal Access Tokens</a></strong>에서 wercker용 Token을 하나 발급하고, 저장해 놓도록 하자.</p>
+
+<p>이제 wercker 사이트에서, 생성한 Appilcation 설정 페이지로 들어가 <strong>Deploy targets</strong>를 추가 한다. <strong>Add deploy target</strong>을 선택하고, <strong>Custom deploy</strong>를 선택한다.</p>
+
+<p>원하는 배포 명을 입력하고, <strong>Auto deploy</strong> 를 체크하고 branch에 <strong>master</strong> 를 입력하고 저장한다.</p>
+
+<p><strong>Deploy pipeline</strong> 섹션에 <strong>Add new variable</strong>을 선택하고, name 항목에 <strong>GIT_TOKEN</strong>, value 항목에는 아까 Github에서 발급한 토큰을 입력하고 OK를 누르면 배포 준비가 완료되었다.</p>
+
+<p>이제 github에 push 하면 자동으로 github pages 까지 배포가 완료 된다!</p>
+
+<pre><code class="language-bash">$ git add .
+$ git commit -a -m &quot;Add deploy settings to wercker.yml&quot;
+$ git push
+</code></pre>
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="/2016/02/15/hugo-hyde-y-theme/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">Hugo Hyde-Y Theme</span>
+    </a>
+    
+    
+    <a href="/2016/12/04/ntfs-for-mac/" class="navigation-next">
+      <span class="navigation-tittle">NTFS for mac</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
+    
+</div>
+
+
+  
+
+  
+    
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+
+    (function () {
+    if (location.hostname === "localhost" ||
+      location.hostname === "127.0.0.1" ||
+      location.hostname === "") {
+      return;
+    }
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    var disqus_shortname = 'kennygithub';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || 
+      document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<noscript>
+  Please enable JavaScript to view the
+  <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by
+  <span class="logo-disqus">Disqus</span>
+</a>
+
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-71902268-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+
+    
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+        
+    
+    <script type="text/javascript">
+        
+        hljs.initHighlightingOnLoad();
+    </script>
+    
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.js"></script>
+<script type="text/javascript">
+  if (tocbot) {
+    tocbot.init({
+      
+      tocSelector: '.toc',
+      
+      contentSelector: '.post',
+      
+      headingSelector: 'h2, h3, h4',
+      collapseDepth: 4
+    });
+  }
+</script>
+
+
+
+    
+
+
+
+    </body>
+</html>
