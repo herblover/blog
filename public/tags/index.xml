@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Kenny&#39;s Blog</title>
+    <link>https://blog.funspaces.org/tags/</link>
+    <description>Recent content in Tags on Kenny&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 13 Feb 2017 19:08:26 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.funspaces.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Development</title>
+      <link>https://blog.funspaces.org/tags/development/</link>
+      <pubDate>Mon, 13 Feb 2017 19:08:26 +0900</pubDate>
+      
+      <guid>https://blog.funspaces.org/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Environment</title>
+      <link>https://blog.funspaces.org/tags/environment/</link>
+      <pubDate>Mon, 13 Feb 2017 19:08:26 +0900</pubDate>
+      
+      <guid>https://blog.funspaces.org/tags/environment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github Pages</title>
+      <link>https://blog.funspaces.org/tags/github-pages/</link>
+      <pubDate>Tue, 16 Feb 2016 14:13:53 +0900</pubDate>
+      
+      <guid>https://blog.funspaces.org/tags/github-pages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://blog.funspaces.org/tags/hugo/</link>
+      <pubDate>Tue, 16 Feb 2016 14:13:53 +0900</pubDate>
+      
+      <guid>https://blog.funspaces.org/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Oh My Zsh</title>
+      <link>https://blog.funspaces.org/tags/oh-my-zsh/</link>
+      <pubDate>Mon, 13 Feb 2017 19:08:26 +0900</pubDate>
+      
+      <guid>https://blog.funspaces.org/tags/oh-my-zsh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theme</title>
+      <link>https://blog.funspaces.org/tags/theme/</link>
+      <pubDate>Mon, 15 Feb 2016 16:45:16 +0900</pubDate>
+      
+      <guid>https://blog.funspaces.org/tags/theme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wercker</title>
+      <link>https://blog.funspaces.org/tags/wercker/</link>
+      <pubDate>Tue, 16 Feb 2016 14:13:53 +0900</pubDate>
+      
+      <guid>https://blog.funspaces.org/tags/wercker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows 7</title>
+      <link>https://blog.funspaces.org/tags/windows-7/</link>
+      <pubDate>Tue, 27 Dec 2016 15:55:09 +0900</pubDate>
+      
+      <guid>https://blog.funspaces.org/tags/windows-7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Zsh</title>
+      <link>https://blog.funspaces.org/tags/zsh/</link>
+      <pubDate>Mon, 13 Feb 2017 19:08:26 +0900</pubDate>
+      
+      <guid>https://blog.funspaces.org/tags/zsh/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

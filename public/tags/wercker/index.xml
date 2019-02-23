@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wercker on Kenny&#39;s Blog</title>
+    <link>https://blog.funspaces.org/tags/wercker/</link>
+    <description>Recent content in Wercker on Kenny&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 16 Feb 2016 14:13:53 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.funspaces.org/tags/wercker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Automated Deployments with Wercker</title>
+      <link>https://blog.funspaces.org/posts/automated-deployments-with-wercker/</link>
+      <pubDate>Tue, 16 Feb 2016 14:13:53 +0900</pubDate>
+      
+      <guid>https://blog.funspaces.org/posts/automated-deployments-with-wercker/</guid>
+      <description>기본 Hugo 프로젝트를 만들고 Wercker를 이용해 자동으로 Github-Pages에 배포하는 작업을 해 보자. 역시나 이 글도 Hugo 공식 문서에 있는 Automated deployments with Wercker의 일부 내용 번역과, 직접 해 보면서 느낀 부분들을 첨언하는 것에 중점을 두려고 한다.</description>
+    </item>
+    
+  </channel>
+</rss>

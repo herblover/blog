@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://blog.funspaces.org/posts/zsh-config-guide/</loc>
+    <lastmod>2017-02-13T19:08:26+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.funspaces.org/posts/fix-windows-7-update-issue/</loc>
+    <lastmod>2016-12-27T15:55:09+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.funspaces.org/posts/sierra-setup/</loc>
+    <lastmod>2016-12-09T15:02:51+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.funspaces.org/posts/ntfs-for-mac/</loc>
+    <lastmod>2016-12-04T16:28:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.funspaces.org/posts/automated-deployments-with-wercker/</loc>
+    <lastmod>2016-02-16T14:13:53+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.funspaces.org/posts/hyde-y-theme/</loc>
+    <lastmod>2016-02-15T16:45:16+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.funspaces.org/posts/el-capitan-setup/</loc>
+    <lastmod>2016-02-15T15:32:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.funspaces.org/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.funspaces.org/tags/development/</loc>
+    <lastmod>2017-02-13T19:08:26+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.funspaces.org/tags/environment/</loc>
+    <lastmod>2017-02-13T19:08:26+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.funspaces.org/tags/github-pages/</loc>
+    <lastmod>2016-02-16T14:13:53+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.funspaces.org/tags/hugo/</loc>
+    <lastmod>2016-02-16T14:13:53+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.funspaces.org/</loc>
+    <lastmod>2017-02-13T19:08:26+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.funspaces.org/tags/oh-my-zsh/</loc>
+    <lastmod>2017-02-13T19:08:26+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.funspaces.org/posts/</loc>
+    <lastmod>2017-02-13T19:08:26+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.funspaces.org/tags/</loc>
+    <lastmod>2017-02-13T19:08:26+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.funspaces.org/tags/theme/</loc>
+    <lastmod>2016-02-15T16:45:16+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.funspaces.org/tags/wercker/</loc>
+    <lastmod>2016-02-16T14:13:53+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.funspaces.org/tags/windows-7/</loc>
+    <lastmod>2016-12-27T15:55:09+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.funspaces.org/tags/zsh/</loc>
+    <lastmod>2017-02-13T19:08:26+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oh My Zsh on Kenny&#39;s Blog</title>
+    <link>https://blog.funspaces.org/tags/oh-my-zsh/</link>
+    <description>Recent content in Oh My Zsh on Kenny&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 13 Feb 2017 19:08:26 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.funspaces.org/tags/oh-my-zsh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Z shell with Oh My Zsh Config Guide</title>
+      <link>https://blog.funspaces.org/posts/zsh-config-guide/</link>
+      <pubDate>Mon, 13 Feb 2017 19:08:26 +0900</pubDate>
+      
+      <guid>https://blog.funspaces.org/posts/zsh-config-guide/</guid>
+      <description>시작하며 MacOS로 작업하는 개발자들이 늘어나고, JavaScript/Python/Ruby등을 사용하는 프로그래머들이 늘어나면서 Shell 작업이 다시 수면위로 떠오른 지 몇년이 지났다. Github 이후로는 많은 프로젝트가 Git으로 작업하고 있는데, Git를 사용하다 보면 별도 설치해서 사용하는 GUI Client들이 생각보다 불편한 경우가 많아 Shell로 돌아오는 분위기이다.</description>
+    </item>
+    
+  </channel>
+</rss>
